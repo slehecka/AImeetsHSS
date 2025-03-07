@@ -1,0 +1,104 @@
+{
+  "links": [
+    {
+      "discriminant": "link",
+      "value": {
+        "label": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "discriminant": "menu",
+      "value": {
+        "label": "Programme",
+        "links": [
+          {
+            "discriminant": "page",
+            "value": {
+              "label": "Schedule",
+              "id": "programme"
+            }
+          },
+          {
+            "discriminant": "page",
+            "value": {
+              "label": "Speakers",
+              "id": "speakers"
+            }
+          },
+          {
+            "discriminant": "page",
+            "value": {
+              "label": "Posters & Live Demos",
+              "id": "posters-and-live-demos"
+            }
+          },
+          {
+            "discriminant": "page",
+            "value": {
+              "label": "Podiumsdiskussion",
+              "id": "podiumsdiskussion"
+            }
+          },
+          {
+            "discriminant": "page",
+            "value": {
+              "label": "Dinner",
+              "id": "dinner"
+            }
+          },
+          {
+            "discriminant": "page",
+            "value": {
+              "label": "Lecturers and Courses",
+              "id": "lecturers-and-courses"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "discriminant": "page",
+      "value": {
+        "label": "Call for Abstracts",
+        "id": "call-for-abstracts"
+      }
+    },
+    {
+      "discriminant": "page",
+      "value": {
+        "label": "Participant List",
+        "id": "participant-list"
+      }
+    },
+    {
+      "discriminant": "menu",
+      "value": {
+        "label": "Venue & Directions",
+        "links": [
+          {
+            "discriminant": "page",
+            "value": {
+              "label": "How to reach the venue",
+              "id": "how-to-reach-the-venue"
+            }
+          },
+          {
+            "discriminant": "page",
+            "value": {
+              "label": "Public transport",
+              "id": "public-transport"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "discriminant": "page",
+      "value": {
+        "label": "Python Basics",
+        "id": "python-basics"
+      }
+    }
+  ]
+}
