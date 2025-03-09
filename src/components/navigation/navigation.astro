@@ -23,7 +23,6 @@ const { class: className, label } = Astro.props;
 		element.dataset.open = "false";
 	});
 	document.querySelectorAll("button[data-nav-menu-trigger]").forEach((element) => {
-		// @ts-expect-error - `setAttribute` is missing in the types
 		element.setAttribute("aria-expanded", "false");
 	});
 </script>

@@ -26,10 +26,6 @@ const syntaxHighlighterConfig: CodeOptionsThemes<BuiltinTheme> = {
 };
 
 const typographyConfig: Record<Locale, TypographicOptions> = {
-	de: {
-		openingQuotes: { double: "„", single: "‚" },
-		closingQuotes: { double: "“", single: "‘" },
-	},
 	en: {
 		openingQuotes: { double: "“", single: "‘" },
 		closingQuotes: { double: "”", single: "’" },

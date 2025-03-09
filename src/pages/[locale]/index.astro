@@ -1,6 +1,5 @@
 ---
 import type { GetStaticPathsResult } from "astro";
-import { compareDesc } from "date-fns";
 
 import Card from "@/components/card.astro";
 import GridList from "@/components/grid-list.astro";
@@ -11,7 +10,6 @@ import SectionTitle from "@/components/section-title.astro";
 import { locales } from "@/config/i18n.config";
 import Layout from "@/layouts/page.layout.astro";
 import { createCollectionResource, createSingletonResource } from "@/lib/content/create-resource";
-import { getFormatter } from "@/lib/formatter";
 import { createI18n } from "@/lib/i18n/create-i18n";
 
 export async function getStaticPaths() {
@@ -29,8 +27,6 @@ const page = await createSingletonResource("indexPage", locale).read();
 const { hero, content, sections } = page.data;
 
 const { default: Content } = await page.compile(content);
-
-const formatter = getFormatter(locale);
 ---
 
 <Layout locale={locale} title={hero.title}>
@@ -93,80 +89,6 @@ const formatter = getFormatter(locale);
 		{
 			sections.map(async (section) => {
 				switch (section.discriminant) {
-					case "data": {
-						const { collections, count, lead, title } = section.value;
-
-						const entries = (
-							await Promise.all(
-								collections.map((collection) => {
-									console.log(collection, locale);
-									return createCollectionResource(collection, locale).all();
-								}),
-							)
-						)
-							.flat()
-							.filter((entry) => {
-								switch (section.value.filter) {
-									case "all": {
-										return true;
-									}
-									case "future": {
-										return new Date(entry.data.date).getTime() > Date.now();
-									}
-									case "past": {
-										return new Date(entry.data.date).getTime() < Date.now();
-									}
-								}
-							})
-							.sort((a, z) => {
-								return compareDesc(a.data.date, z.data.date);
-							})
-							.slice(0, count);
-
-						return (
-							<Section>
-								<div class="container grid content-start gap-y-md border-b py-xl">
-									<SectionTitle>{title}</SectionTitle>
-									<SectionLead>{lead}</SectionLead>
-									{entries.length > 0 ? (
-										<GridList>
-											{entries.map((entry) => {
-												const { collection, data, id } = entry;
-
-												const { date, image, location, title } = data;
-
-												const href = `/${collection}/${id}`;
-
-												return (
-													<li>
-														<Card href={href} image={image} title={title}>
-															<dl class="grid content-start gap-y-xs text-text-weak">
-																<div class="leading-snug">
-																	<dt class="text-uppercase uppercase">{t("common.date")}</dt>
-																	<dd class="font-medium">
-																		{formatter.date.format(new Date(date))}
-																	</dd>
-																</div>
-																<div class="leading-snug">
-																	<dt class="text-uppercase uppercase">{t("common.location")}</dt>
-																	<dd class="font-medium">{location}</dd>
-																</div>
-															</dl>
-														</Card>
-													</li>
-												);
-											})}
-										</GridList>
-									) : (
-										<p class="flex justify-center py-xl text-center text-sm text-text-weak">
-											{t("common.coming-soon")}
-										</p>
-									)}
-								</div>
-							</Section>
-						);
-					}
-
 					case "links": {
 						const { lead, links, title } = section.value;
 
