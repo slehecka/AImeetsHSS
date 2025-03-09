@@ -1,3 +1,3 @@
-# german abroad
+# AImeetsHSS
 
-website for the german abroad research network. deployed at <https://germanabroad.info>.
+website for the AImeetsHSS conference.
