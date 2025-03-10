@@ -7,7 +7,12 @@ import { locales } from "@/config/i18n.config";
 import { pages } from "@/lib/keystatic/collections";
 import { withI18nPrefix } from "@/lib/keystatic/lib";
 import { Logo } from "@/lib/keystatic/logo";
-import { indexPage, metadata, navigation, registrationPage } from "@/lib/keystatic/singletons";
+import {
+	indexPage,
+	metadata,
+	navigation,
+	registrationPageConference,
+} from "@/lib/keystatic/singletons";
 
 export default config({
 	collections: {
@@ -16,14 +21,14 @@ export default config({
 	singletons: {
 		[withI18nPrefix("indexPage", "en")]: indexPage("en"),
 
-		[withI18nPrefix("registrationPage", "en")]: registrationPage("en"),
+		[withI18nPrefix("registrationPageConference", "en")]: registrationPageConference("en"),
 
 		[withI18nPrefix("metadata", "en")]: metadata("en"),
 
 		[withI18nPrefix("navigation", "en")]: navigation("en"),
 	},
 	storage:
-		env.PUBLIC_KEYSTATIC_MODE === "github" &&
+		env.PUBLIC_KEYSTATIC_MODE === "local" &&
 		env.PUBLIC_KEYSTATIC_GITHUB_REPO_OWNER != null &&
 		env.PUBLIC_KEYSTATIC_GITHUB_REPO_NAME != null
 			? {
@@ -46,7 +51,7 @@ export default config({
 		},
 		navigation: {
 			"Home page": locales.map((locale) => withI18nPrefix("indexPage", locale)),
-			Registration: locales.map((locale) => withI18nPrefix("registrationPage", locale)),
+			Registration: locales.map((locale) => withI18nPrefix("registrationPageConference", locale)),
 			Pages: locales.map((locale) => withI18nPrefix("pages", locale)),
 			Navigation: locales.map((locale) => withI18nPrefix("navigation", locale)),
 			Metadata: locales.map((locale) => withI18nPrefix("metadata", locale)),

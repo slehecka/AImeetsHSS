@@ -193,8 +193,8 @@ export const indexPage = createSingleton((locale) => {
 	});
 });
 
-export const registrationPage = createSingleton((locale) => {
-	const paths = createSingletonPaths("/registration/", locale);
+export const registrationPageConference = createSingleton((locale) => {
+	const paths = createSingletonPaths("/registration-conference/", locale);
 
 	return singleton({
 		label: createLabel("Conference Registration", locale),

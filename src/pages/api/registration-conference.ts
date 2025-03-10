@@ -12,7 +12,7 @@ const RegistrationFormSchema = v.pipe(
 		"first-name": v.pipe(v.string(), v.nonEmpty()),
 		"last-name": v.pipe(v.string(), v.nonEmpty()),
 		email: v.pipe(v.string(), v.email()),
-		affiliation: v.pipe(v.string(), v.nonEmpty()),
+		affiliation: v.pipe(v.string()),
 		"data-consent": v.literal("on"),
 	}),
 	v.transform((data) => {
