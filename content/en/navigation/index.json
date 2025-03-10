@@ -65,13 +65,6 @@
       }
     },
     {
-      "discriminant": "page",
-      "value": {
-        "label": "Participant List",
-        "id": "participant-list"
-      }
-    },
-    {
       "discriminant": "menu",
       "value": {
         "label": "Venue & Directions",
