@@ -60,8 +60,8 @@
     {
       "discriminant": "page",
       "value": {
-        "label": "Call for Abstracts",
-        "id": "call-for-abstracts"
+        "label": "Call for Posters & Demos",
+        "id": "call-for-posters-and-demos"
       }
     },
     {
