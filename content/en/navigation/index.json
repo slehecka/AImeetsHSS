@@ -39,20 +39,6 @@
               "label": "Podiumsdiskussion",
               "id": "podiumsdiskussion"
             }
-          },
-          {
-            "discriminant": "page",
-            "value": {
-              "label": "Dinner",
-              "id": "dinner"
-            }
-          },
-          {
-            "discriminant": "page",
-            "value": {
-              "label": "Lecturers and Courses",
-              "id": "lecturers-and-courses"
-            }
           }
         ]
       }
