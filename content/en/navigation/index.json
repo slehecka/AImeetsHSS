@@ -29,13 +29,6 @@
           {
             "discriminant": "page",
             "value": {
-              "label": "Posters & Live Demos",
-              "id": "posters-and-live-demos"
-            }
-          },
-          {
-            "discriminant": "page",
-            "value": {
               "label": "Podiumsdiskussion",
               "id": "podiumsdiskussion"
             }
@@ -70,6 +63,20 @@
             }
           }
         ]
+      }
+    },
+    {
+      "discriminant": "page",
+      "value": {
+        "label": "Organisation",
+        "id": "organisation"
+      }
+    },
+    {
+      "discriminant": "page",
+      "value": {
+        "label": "Contact",
+        "id": "contact"
       }
     }
   ]
