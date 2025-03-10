@@ -92,13 +92,6 @@
           }
         ]
       }
-    },
-    {
-      "discriminant": "page",
-      "value": {
-        "label": "Python Basics",
-        "id": "python-basics"
-      }
     }
   ]
 }
