@@ -44,25 +44,10 @@
       }
     },
     {
-      "discriminant": "menu",
+      "discriminant": "page",
       "value": {
-        "label": "Venue & Directions",
-        "links": [
-          {
-            "discriminant": "page",
-            "value": {
-              "label": "How to reach the venue",
-              "id": "how-to-reach-the-venue"
-            }
-          },
-          {
-            "discriminant": "page",
-            "value": {
-              "label": "Public transport",
-              "id": "public-transport"
-            }
-          }
-        ]
+        "label": "Location",
+        "id": "location"
       }
     },
     {
