@@ -27,6 +27,16 @@ export const env = createEnv({
 			KEYSTATIC_GITHUB_CLIENT_ID: v.optional(v.pipe(v.string(), v.nonEmpty())),
 			KEYSTATIC_GITHUB_CLIENT_SECRET: v.optional(v.pipe(v.string(), v.nonEmpty())),
 			KEYSTATIC_SECRET: v.optional(v.pipe(v.string(), v.nonEmpty())),
+			BASEROW_API_KEY: v.optional(v.pipe(v.string(), v.nonEmpty())),
+			BASEROW_TABLE_ID_CONFERENCE: v.optional(
+				v.pipe(v.string(), v.transform(Number), v.number(), v.integer(), v.minValue(1)),
+			),
+			BASEROW_TABLE_ID_DISKUSSION: v.optional(
+				v.pipe(v.string(), v.transform(Number), v.number(), v.integer(), v.minValue(1)),
+			),
+			BASEROW_TABLE_ID_SUBMISSIONS: v.optional(
+				v.pipe(v.string(), v.transform(Number), v.number(), v.integer(), v.minValue(1)),
+			),
 		});
 		return v.parse(Schema, input);
 	},
@@ -51,6 +61,7 @@ export const env = createEnv({
 				v.integer(),
 				v.minValue(1),
 			),
+			PUBLIC_BASEROW_API_BASE_URL: v.optional(v.pipe(v.string(), v.url())),
 		});
 		return v.parse(Schema, input);
 	},
