@@ -29,30 +29,9 @@
           {
             "discriminant": "page",
             "value": {
-              "label": "Posters & Live Demos",
-              "id": "posters-and-live-demos"
-            }
-          },
-          {
-            "discriminant": "page",
-            "value": {
               "label": "Podiumsdiskussion",
               "id": "podiumsdiskussion"
             }
-          },
-          {
-            "discriminant": "page",
-            "value": {
-              "label": "Dinner",
-              "id": "dinner"
-            }
-          },
-          {
-            "discriminant": "page",
-            "value": {
-              "label": "Lecturers and Courses",
-              "id": "lecturers-and-courses"
-            }
           }
         ]
       }
@@ -60,44 +39,29 @@
     {
       "discriminant": "page",
       "value": {
-        "label": "Call for Abstracts",
-        "id": "call-for-abstracts"
+        "label": "Call for Posters & Demos",
+        "id": "call-for-posters-and-demos"
       }
     },
     {
       "discriminant": "page",
       "value": {
-        "label": "Participant List",
-        "id": "participant-list"
-      }
-    },
-    {
-      "discriminant": "menu",
-      "value": {
-        "label": "Venue & Directions",
-        "links": [
-          {
-            "discriminant": "page",
-            "value": {
-              "label": "How to reach the venue",
-              "id": "how-to-reach-the-venue"
-            }
-          },
-          {
-            "discriminant": "page",
-            "value": {
-              "label": "Public transport",
-              "id": "public-transport"
-            }
-          }
-        ]
+        "label": "Location",
+        "id": "location"
       }
     },
     {
       "discriminant": "page",
       "value": {
-        "label": "Python Basics",
-        "id": "python-basics"
+        "label": "Organisation",
+        "id": "organisation"
+      }
+    },
+    {
+      "discriminant": "page",
+      "value": {
+        "label": "Contact",
+        "id": "contact"
       }
     }
   ]
