@@ -99,6 +99,13 @@
         "label": "Python Basics",
         "id": "python-basics"
       }
+    },
+    {
+      "discriminant": "page",
+      "value": {
+        "label": "su",
+        "id": "success"
+      }
     }
   ]
 }
