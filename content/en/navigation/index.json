@@ -53,13 +53,6 @@
               "label": "Lecturers and Courses",
               "id": "lecturers-and-courses"
             }
-          },
-          {
-            "discriminant": "page",
-            "value": {
-              "label": "su",
-              "id": "success"
-            }
           }
         ]
       }
