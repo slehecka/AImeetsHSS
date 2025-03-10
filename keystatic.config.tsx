@@ -28,7 +28,7 @@ export default config({
 		[withI18nPrefix("navigation", "en")]: navigation("en"),
 	},
 	storage:
-		env.PUBLIC_KEYSTATIC_MODE === "local" &&
+		env.PUBLIC_KEYSTATIC_MODE === "github" &&
 		env.PUBLIC_KEYSTATIC_GITHUB_REPO_OWNER != null &&
 		env.PUBLIC_KEYSTATIC_GITHUB_REPO_NAME != null
 			? {
