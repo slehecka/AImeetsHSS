@@ -1,5 +1,5 @@
-@import url("./tokens.css");
-@import url("./layout.css");
+@import "./tokens.css";
+@import "./layout.css";
 
 :root {
 	font-size: var(--font-size-small);
@@ -17,7 +17,8 @@ body {
 
 .bg-mesh {
 	background-color: color-mix(in sRGB, var(--color-brand-light-1000) 25%, transparent);
-	background-image: radial-gradient(at 15% 15%, hsl(0deg 0% 100% / 70%) 0, transparent 50%),
+	background-image:
+		radial-gradient(at 15% 15%, hsl(0deg 0% 100% / 70%) 0, transparent 50%),
 		radial-gradient(at 64% 96%, hsl(0deg 100% 100% / 70%) 0, transparent 50%),
 		radial-gradient(at 100% 30%, hsl(0deg 100% 100% / 70%) 0, transparent 50%);
 }

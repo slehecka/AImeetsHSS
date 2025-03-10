@@ -6,7 +6,7 @@ import { assert } from "@acdh-oeaw/lib";
 import type { Locale } from "@/config/i18n.config";
 import { getMdxContent } from "@/lib/content/get-mdx-content";
 import { createReader, withI18nPrefix, type WithoutI18nPrefix } from "@/lib/keystatic/lib";
-import config from "~/keystatic.config.tsx";
+import config from "~/keystatic.config";
 
 export type Collections = keyof typeof config.collections;
 

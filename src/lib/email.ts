@@ -4,10 +4,10 @@ import { createTransport, type SendMailOptions } from "nodemailer";
 import { env } from "@/config/env.config";
 
 interface SendEmailParams
-	extends Pick<SendMailOptions, "attachments" | "from" | "subject" | "text"> {}
+	extends Pick<SendMailOptions, "attachments" | "from" | "subject" | "text" | "to"> {}
 
 export function sendEmail(params: SendEmailParams) {
-	const { attachments, from, subject, text } = params;
+	const { attachments, from, subject, text, to } = params;
 
 	assert(env.EMAIL_SMTP_SERVER, "Invalid email configuration.");
 	assert(env.EMAIL_SMTP_PORT, "Invalid email configuration.");
@@ -28,7 +28,7 @@ export function sendEmail(params: SendEmailParams) {
 
 	return transporter.sendMail({
 		from,
-		to: env.EMAIL_CONTACT_ADDRESS,
+		to,
 		bcc: env.EMAIL_CONTACT_ADDRESS_BCC,
 		subject,
 		text,
